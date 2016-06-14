@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="v4l2onvif" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="server.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Debug/" />
+				<Option external_deps="/usr/share/gsoap/plugin/smdevp.c ;/usr/share/gsoap/plugin/wsseapi.h;/usr/share/gsoap/plugin/wsseapi.c ;/usr/share/gsoap/plugin/smdevp.h;/usr/share/gsoap/plugin/mecevp.c ;/usr/share/gsoap/plugin/mecevp.h;/usr/share/gsoap/plugin/wsaapi.c;/usr/share/gsoap/plugin/wsaapi.h;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="gen" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="make server.exe" />
+					<CompileFile command="" />
+					<Clean command="make clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command="make server.exe &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/v4l2onvif" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-fpermissive" />
+			<Add option="-DSOAP_PURE_VIRTUAL" />
+			<Add option="-DWITH_OPENSSL" />
+			<Add directory="gen" />
+			<Add directory="/usr/share/gsoap/plugin" />
+			<Add directory="/usr/share/gsoap/import" />
+		</Compiler>
+		<Linker>
+			<Add option="-lgsoapssl++" />
+			<Add option="-lssl" />
+			<Add option="-lcrypto" />
+			<Add option="-lz" />
+			<Add directory="/usr/lib" />
+		</Linker>
+		<Unit filename="client.cpp" />
+		<Unit filename="gen/onvif.h" />
+		<Unit filename="gen/soapC_001.cpp" />
+		<Unit filename="gen/soapC_002.cpp" />
+		<Unit filename="gen/soapC_003.cpp" />
+		<Unit filename="gen/soapC_004.cpp" />
+		<Unit filename="gen/soapC_005.cpp" />
+		<Unit filename="gen/soapC_006.cpp" />
+		<Unit filename="gen/soapC_007.cpp" />
+		<Unit filename="gen/soapC_008.cpp" />
+		<Unit filename="gen/soapC_009.cpp" />
+		<Unit filename="gen/soapC_010.cpp" />
+		<Unit filename="gen/soapC_011.cpp" />
+		<Unit filename="gen/soapC_012.cpp" />
+		<Unit filename="gen/soapC_013.cpp" />
+		<Unit filename="gen/soapCreatePullPointBindingProxy.cpp" />
+		<Unit filename="gen/soapCreatePullPointBindingProxy.h" />
+		<Unit filename="gen/soapCreatePullPointBindingService.cpp" />
+		<Unit filename="gen/soapCreatePullPointBindingService.h" />
+		<Unit filename="gen/soapDeviceBindingProxy.cpp" />
+		<Unit filename="gen/soapDeviceBindingProxy.h" />
+		<Unit filename="gen/soapDeviceBindingService.cpp" />
+		<Unit filename="gen/soapDeviceBindingService.h" />
+		<Unit filename="gen/soapDeviceIOBindingProxy.cpp" />
+		<Unit filename="gen/soapDeviceIOBindingProxy.h" />
+		<Unit filename="gen/soapDeviceIOBindingService.cpp" />
+		<Unit filename="gen/soapDeviceIOBindingService.h" />
+		<Unit filename="gen/soapDisplayBindingProxy.cpp" />
+		<Unit filename="gen/soapDisplayBindingProxy.h" />
+		<Unit filename="gen/soapDisplayBindingService.cpp" />
+		<Unit filename="gen/soapDisplayBindingService.h" />
+		<Unit filename="gen/soapEventBindingProxy.cpp" />
+		<Unit filename="gen/soapEventBindingProxy.h" />
+		<Unit filename="gen/soapEventBindingService.cpp" />
+		<Unit filename="gen/soapEventBindingService.h" />
+		<Unit filename="gen/soapH.h" />
+		<Unit filename="gen/soapImagingBindingProxy.cpp" />
+		<Unit filename="gen/soapImagingBindingProxy.h" />
+		<Unit filename="gen/soapImagingBindingService.cpp" />
+		<Unit filename="gen/soapImagingBindingService.h" />
+		<Unit filename="gen/soapMediaBindingProxy.cpp" />
+		<Unit filename="gen/soapMediaBindingProxy.h" />
+		<Unit filename="gen/soapMediaBindingService.cpp" />
+		<Unit filename="gen/soapMediaBindingService.h" />
+		<Unit filename="gen/soapNotificationConsumerBindingProxy.cpp" />
+		<Unit filename="gen/soapNotificationConsumerBindingProxy.h" />
+		<Unit filename="gen/soapNotificationConsumerBindingService.cpp" />
+		<Unit filename="gen/soapNotificationConsumerBindingService.h" />
+		<Unit filename="gen/soapNotificationProducerBindingProxy.cpp" />
+		<Unit filename="gen/soapNotificationProducerBindingProxy.h" />
+		<Unit filename="gen/soapNotificationProducerBindingService.cpp" />
+		<Unit filename="gen/soapNotificationProducerBindingService.h" />
+		<Unit filename="gen/soapPausableSubscriptionManagerBindingProxy.cpp" />
+		<Unit filename="gen/soapPausableSubscriptionManagerBindingProxy.h" />
+		<Unit filename="gen/soapPausableSubscriptionManagerBindingService.cpp" />
+		<Unit filename="gen/soapPausableSubscriptionManagerBindingService.h" />
+		<Unit filename="gen/soapPullPointBindingProxy.cpp" />
+		<Unit filename="gen/soapPullPointBindingProxy.h" />
+		<Unit filename="gen/soapPullPointBindingService.cpp" />
+		<Unit filename="gen/soapPullPointBindingService.h" />
+		<Unit filename="gen/soapPullPointSubscriptionBindingProxy.cpp" />
+		<Unit filename="gen/soapPullPointSubscriptionBindingProxy.h" />
+		<Unit filename="gen/soapPullPointSubscriptionBindingService.cpp" />
+		<Unit filename="gen/soapPullPointSubscriptionBindingService.h" />
+		<Unit filename="gen/soapReceiverBindingProxy.cpp" />
+		<Unit filename="gen/soapReceiverBindingProxy.h" />
+		<Unit filename="gen/soapReceiverBindingService.cpp" />
+		<Unit filename="gen/soapReceiverBindingService.h" />
+		<Unit filename="gen/soapRecordingBindingProxy.cpp" />
+		<Unit filename="gen/soapRecordingBindingProxy.h" />
+		<Unit filename="gen/soapRecordingBindingService.cpp" />
+		<Unit filename="gen/soapRecordingBindingService.h" />
+		<Unit filename="gen/soapReplayBindingProxy.cpp" />
+		<Unit filename="gen/soapReplayBindingProxy.h" />
+		<Unit filename="gen/soapReplayBindingService.cpp" />
+		<Unit filename="gen/soapReplayBindingService.h" />
+		<Unit filename="gen/soapSearchBindingProxy.cpp" />
+		<Unit filename="gen/soapSearchBindingProxy.h" />
+		<Unit filename="gen/soapSearchBindingService.cpp" />
+		<Unit filename="gen/soapSearchBindingService.h" />
+		<Unit filename="gen/soapStub.h" />
+		<Unit filename="gen/soapSubscriptionManagerBindingProxy.cpp" />
+		<Unit filename="gen/soapSubscriptionManagerBindingProxy.h" />
+		<Unit filename="gen/soapSubscriptionManagerBindingService.cpp" />
+		<Unit filename="gen/soapSubscriptionManagerBindingService.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="onvif_impl.cpp" />
+		<Unit filename="onvif_impl.h" />
+		<Unit filename="server.cpp" />
+		<Unit filename="serverDevice.cpp" />
+		<Unit filename="serverDeviceIO.cpp" />
+		<Unit filename="serverDisplay.cpp" />
+		<Unit filename="serverEvent.cpp" />
+		<Unit filename="serverImaging.cpp" />
+		<Unit filename="serverMedia.cpp" />
+		<Unit filename="serverNotificationConsumer.cpp" />
+		<Unit filename="serverNotificationProducer.cpp" />
+		<Unit filename="serverPullPointSubscription.cpp" />
+		<Unit filename="serverReceiver.cpp" />
+		<Unit filename="serverRecording.cpp" />
+		<Unit filename="serverReplay.cpp" />
+		<Unit filename="serverSearch.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
